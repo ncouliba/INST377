@@ -21,10 +21,12 @@
 
 
 
-function Square (width, height, color, classname){
-	this.width = width;
+function Square (width, height, color, classname, margin_left, margin_top){
+    this.width = width;
 	this.height = height;
 	this.background = color;
+    this.margin_left = margin_left;
+    this.margin_top = margin_top;
 
 	// creates a div tag inside the "container" object.
 	sq = document.getElementById("container").appendChild(document.createElement("div"))
@@ -32,22 +34,30 @@ function Square (width, height, color, classname){
 	sq.setAttribute("style", "height:" + this.height);
 	sq.style.width = this.width;
 	sq.style.background = this.background;
-
+    sq.style["margin-left"] = this.margin_left;
+    sq.style["margin-top"] = this.margin_top;
+    sq.style.position = "absolutue";
+    
 	this.changeColor = function(c){
 		this.background = c;
 		sq.style.background = this.background;
 	}
-	// Task 2
+	// Task 3
+    this.putSentence = function(text){
+        sq.innerHTML = text;
+    }
 }
 
-s1 = new Square("200px", "50px", "grey", "square")
+s1 = new Square("200px", "50px", "grey", "square", "1px", "1px")
 
 
 // Task 1
+   s1.changeColor("blue");
+  s1.putSentence("hello");
 
 // Task 2
-
-
+s2 = new Square("200px", "50px", "orange", "square", "200px", "200px")
+s2.putSentence("hi");
 </script>
 
 </body>
