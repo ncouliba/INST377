@@ -26,8 +26,8 @@
 
 <body>
 	
-	<div id="square" onclick="showSentence()"></div>
-	<!-- <div id="square" onclick="trigger()"></div> -->
+    <!--<div id="square" onclick="showSentence()"></div>-->
+	 <div id="square" onclick="trigger()"></div> 
 
 	<div>
 		<p> Hello, this is inside a PPPPP tag. </p>
@@ -36,41 +36,41 @@
 
 <script>
 
-function showSentence(){
+//function showSentence(){
+//	var xhttp = new XMLHttpRequest();
+//	xhttp.onreadystatechange = function() {
+//		if (this.readyState == 4 && this.status == 200) {
+//			document.getElementById("square").innerHTML = this.responseText;
+//		}
+//	};
+//	xhttp.open("GET", "test.txt", true);
+//	xhttp.send();
+//}
+
+
+ function trigger(){
+	showSentence("json/data.json", test1);
+ }
+
+ function showSentence(url, func){
 	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			document.getElementById("square").innerHTML = this.responseText;
-		}
-	};
-	xhttp.open("GET", "test.txt", true);
-	xhttp.send();
-}
+   xhttp.onreadystatechange = function() {
+ 		if (this.readyState == 4 && this.status == 200) {
+			func(this);
+ 		}
+ 	};
+ 	xhttp.open("GET", url, true);
+ 	xhttp.send();
+ }
 
+ function test1(xhttps){
+ 	document.getElementById("square").innerHTML = xhttps.responseText;
+ }
 
-// function trigger(){
-// 	show_sentence("test.txt", test1);
-// }
-
-// function showSentence(url, func){
-// 	var xhttp = new XMLHttpRequest();
-// 	xhttp.onreadystatechange = function() {
-// 		if (this.readyState == 4 && this.status == 200) {
-// 			func(this);
-// 		}
-// 	};
-// 	xhttp.open("GET", url, true);
-// 	xhttp.send();
-// }
-
-// function test1(xhttps){
-// 	document.getElementById("square").innerHTML = xhttps.responseText;
-// }
-
-// function test2(xhttps){
-// 	document.getElementById("square").innerHTML = xhttps.responseText;
-// 	document.getElementById("square").style.color = "green";
-// }
+ function test2(xhttps){
+ 	document.getElementById("square").innerHTML = xhttps.responseText;
+ 	document.getElementById("square").style.color = "green";
+ }
 
 </script>
 
