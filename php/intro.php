@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-<style>
-div {
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-</style>
-<body>
+
 
 <?php 
 
@@ -69,6 +61,3 @@ test_func("thrid run.");
 echo "<div>You cannot access to $local outside the function.</div>";
 
 ?>
-
-</body>
-</html>
