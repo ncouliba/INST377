@@ -26,7 +26,7 @@ foreach ($arr as $v){
 }
 
 
-# Associative Array
+# Associative Array arrays with keyvalue pairs
 $arr = array("a"=>"Lion", "b"=>"Chicken", "c"=>"Cat");
 foreach ($arr as $key => $value){
 	echo $key . " " . $value . "<br>";
@@ -48,4 +48,16 @@ $json = json_decode($organizations, true);
 print ("<pre>");
 print_r($json);
 print ("</pre>");
+
+    echo "<table>";   
+foreach($json as $key=>$value){
+    echo "This is the start of a new org";
+    . "<tr>"
+        foreach($value as $k => $v){
+            if($k == "Organization Name" || $k == "City"){
+                echo "<td>";
+                echo $k . " " . $v . "<br>";
+            }
+        }
+}
 ?>
