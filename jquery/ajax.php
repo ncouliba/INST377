@@ -41,16 +41,20 @@ function showSentence(){
 $(document).ready(function(){
 
 	
-	// $("#square").click(function(){
-	// 	// // Using "GET" method
-	// 	// $.get("ajax_test.php",
-	// 	// 	{
-	// 	//   		name: "John Smith"
-	// 	// 	}, 
-	// 	// 	function(response, status){
-	// 	// 		$("#square").text(status + ": " + response);
-	// 	// 	}
-	// 	// );
+//	 $("#square").click(function(){
+//	 	// Using "GET" method
+//         $.get("ajax_test.txt", function(response, status){
+//             $("#square").text(status + ": " + response);
+//         
+//         });
+//	 	 $.get("ajax_test.php",
+//	 	 	{
+//	 	   		name: "John Smith"
+//	 	 	}, 
+//	 	 	function(response, status){
+//	 	 		$("#square").text(status + ": " + response);
+//	 	 	}
+//     });
 
 	// 	// // Using "POST" method
 	// 	// $.post("ajax_test.php",
@@ -134,8 +138,8 @@ $(document).ready(function(){
 
 <body>
 	
-	<div id="square" onclick="showSentence()"></div>	
-	<!-- <div id="square"></div> -->
+<!--	<div id="square" onclick="showSentence()"></div>	-->
+	 <div id="square"></div> 
 	
 
 
