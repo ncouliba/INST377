@@ -44,12 +44,20 @@
 		cursor: pointer;
 		margin-top: 20px;
 	}
+<<<<<<< HEAD
+=======
+	#form {
+		margin-top: 10px;
+	}
+
+>>>>>>> upstream/master
 	
 </style>
 <script>
 
 
 $(document).ready(function(){
+<<<<<<< HEAD
     	
 	// Select a parent of a clicked row
 	$(".row td").click(function(){				
@@ -61,6 +69,14 @@ $(document).ready(function(){
 	$("#find").click(function(){
 		form_value = $("#form input").val();
 		$("td:contains(form_value).css("background", "red"); // finding an element based on contents
+=======
+
+	$("#find").click(function(){
+		// form_value = document.forms["form"]["search"].value;
+		form_value = $("#form input").val();
+
+		$("td:contains("+ form_value+ ")").css("background", "red"); // finding an element based on contents
+>>>>>>> upstream/master
 		
 	})
 
@@ -88,10 +104,19 @@ $(document).ready(function(){
 		</table>
 	</div>
 	<div id="find">FIND</div>
+<<<<<<< HEAD
     <div>
     <form>
         <input id = "form" type= "text" name= "Serach" value = "">
         </form></div>
+=======
+	<div>
+		<form id="form" name="form">
+			<input type="text" name="search" value="">
+		</form>
+	</div>
+
+>>>>>>> upstream/master
 	
 
 </body>
